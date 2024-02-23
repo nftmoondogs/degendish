@@ -6,7 +6,7 @@ import Card from "./Card";
 
 const getData = async (page, cat) => {
   const res = await fetch(
-    `http://localhost:3001/api/postss?page=${page}&cat=${cat || ""}`,
+    `http://localhost:3000/api/postss?page=${page}&cat=${cat || ""}`,
     {
       cache: "no-store",
     }

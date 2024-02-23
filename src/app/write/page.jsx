@@ -49,7 +49,7 @@ const WritePage = () => {
 
   // Firebase Upload Logic (Client-side execution)
   useEffect(() => {
-    if (file) { 
+    if (file) {
       const storage = getStorage(app);
       const upload = () => {
         const name = new Date().getTime() + file.name;
@@ -80,7 +80,7 @@ const WritePage = () => {
           }
         );
       };
-      upload(); 
+      upload();
     }
   }, [file]);
 
@@ -100,7 +100,10 @@ const WritePage = () => {
         className={styles.input}
         onChange={(e) => setTitle(e.target.value)}
       />
-      <select className={styles.select} onChange={(e) => setCatSlug(e.target.value)}>
+      <select
+        className={styles.select}
+        onChange={(e) => setCatSlug(e.target.value)}
+      >
         <option value="DeFi">DeFi</option>
         <option value="NFT">NFT</option>
       </select>

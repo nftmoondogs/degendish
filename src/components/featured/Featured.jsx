@@ -1,30 +1,43 @@
 import React from "react";
-import styles from "./featured.module.css";
+import styles from "./cardList.module.css";
+import Pagination from "../pagination/Pagination";
 import Image from "next/image";
+import Card from "./Card";
 
-const Featured = () => {
+const getData = async (page, cat) => {
+  const res = await fetch(
+    `http://localhost:3000/api/postss?page=${page}&cat=${cat || ""}`,
+    {
+      cache: "no-store",
+    }
+  );
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const CardList = async ({ page, cat }) => {
+  const { posts, count } = await getData(page, cat);
+
+  const POST_PER_PAGE = 1;
+
+  const hasPrev = POST_PER_PAGE * (page - 1) > 0;
+  const hasNext = POST_PER_PAGE * (page - 1) + POST_PER_PAGE < count;
+
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>
-        <b>Hey, lama dev here!</b> Discover my stories and creative ideas.
-      </h1>
-      <div className={styles.post}>
-        <div className={styles.imgContainer}>
-          <Image src="/p1.jpeg" alt="" fill className={styles.image} />
-        </div>
-        <div className={styles.textContainer}>
-          <h1 className={styles.postTitle}>Lorem ipsum dolor sit amet alim consectetur adipisicing elit.</h1>
-          <p className={styles.postDesc}>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-            Cupiditate, quam nisi magni ea laborum inventore voluptatum
-            laudantium repellat ducimus unde aspernatur fuga. Quo, accusantium
-            quisquam! Harum unde sit culpa debitis.
-          </p>
-          <button className={styles.button}>Read More</button>
-        </div>
+      <h1 className={styles.title}>Latest News</h1>
+      <div className={styles.posts}>
+        {posts?.map((item) => (
+          <Card item={item} key={item._id} />
+        ))}
       </div>
+
     </div>
   );
 };
 
-export default Featured;
+export default CardList;

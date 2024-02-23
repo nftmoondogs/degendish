@@ -2,3 +2,8 @@
   display: flex;
   gap: 50px;
 }
+
+.featuredContainer { /* Assuming this is the main container of the Featured component */
+  padding-top: 30px;    /* Adjust top padding as needed */
+  padding-bottom: 30px; /* Adjust bottom padding as needed */
+}

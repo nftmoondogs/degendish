@@ -10,8 +10,9 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-      <Featured />
-      <CategoryList />
+      <div className={styles.featuredContainer} style={{ paddingTop: '70px', paddingBottom: '130px' }}>
+      <Featured page={page}/>
+</div>
       <div className={styles.content}>
         <CardList page={page}/>
         <Menu />

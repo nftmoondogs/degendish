@@ -8,43 +8,36 @@ const Footer = () => {
     <div className={styles.container}>
       <div className={styles.info}>
         <div className={styles.logo}>
-          <Image src="/logo.png" alt="lama blog" width={50} height={50} />
-          <h1 className={styles.logoText}>Lamablog</h1>
+          <Image src="/woof.png" alt="woof" width={50} height={50} />
+          <h1 className={styles.logoText}>Degen Dish</h1>
         </div>
         <p className={styles.desc}>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
-          necessitatibus similique aspernatur obcaecati veritatis. Aperiam cum
-          porro sequi, totam minima consequuntur, aspernatur deleniti vero
-          repellendus dorales.
+        Your source for unapologetically degen takes on the Solana ecosystem.
         </p>
         <div className={styles.icons}>
-          <Image src="/facebook.png" alt="" width={18} height={18} />
-          <Image src="/instagram.png" alt="" width={18} height={18} />
-          <Image src="/tiktok.png" alt="" width={18} height={18} />
-          <Image src="/youtube.png" alt="" width={18} height={18} />
+          <Image src="/twitter.svg" alt="" width={18} height={18} />
+          <Image src="/telegram.svg" alt="" width={18} height={18} />
         </div>
       </div>
       <div className={styles.links}>
         <div className={styles.list}>
           <span className={styles.listTitle}>Links</span>
           <Link href="/">Homepage</Link>
-          <Link href="/">Blog</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          <Link href="https://twitter.com/DegenDish">About</Link>
+          <Link href="https://t.me/moondogsmod?start=DegenDishInquiry">Contact</Link>
+          <Link href="/write" className={styles.link}>
+            Admin
+          </Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">Style</Link>
-          <Link href="/">Fashion</Link>
-          <Link href="/">Coding</Link>
-          <Link href="/">Travel</Link>
+          <Link href="/">DeFi</Link>
+          <Link href="/">NFTs</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>
-          <Link href="/">Facebook</Link>
-          <Link href="/">Instagram</Link>
-          <Link href="/">Tiktok</Link>
-          <Link href="/">Youtube</Link>
+          <Link href="https://twitter.com/wooflabs">Twitter</Link>
+          <Link href="https://t.me/woofcult">Telegram</Link>
         </div>
       </div>
     </div>

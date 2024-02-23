@@ -6,78 +6,43 @@ import styles from "./menuPosts.module.css"
 const MenuPosts = ({ withImage }) => {
   return (
     <div className={styles.items}>
-      <Link href="/" className={styles.item}>
+      <Link href="/posts/youtuber-ksi-accused-of-pump-and-dump-schemes-the-full-story" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/p1.jpeg" alt="" fill className={styles.image} />
+            <Image src="/k1.png" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.travel}`}>Travel</span>
+          <span className={`${styles.category} ${styles.DeFi}`}>DeFi</span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Youtuber KSI Accused of Pump and Dump Schemes: The Full Story
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>Yuccie Hope</span>
+            <span className={styles.date}> - 23.02.2024</span>
           </div>
         </div>
       </Link>
-      <Link href="/" className={styles.item}>
+      <Link href="/posts/what-is-portal-coin-the-47th-binance-launchpool-project" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/p1.jpeg" alt="" fill className={styles.image} />
+            <Image src="/b2.png" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.culture}`}>
-            Culture
+          <span className={`${styles.category} ${styles.NFT}`}>
+            NFT
           </span>
           <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          What is Portal Coin: The 47th Binance Launchpool Project?
           </h3>
           <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
+            <span className={styles.username}>WOOF MOD</span>
+            <span className={styles.date}> - 10.02.2024</span>
           </div>
         </div>
       </Link>
-      <Link href="/" className={styles.item}>
-        {withImage && (
-          <div className={styles.imageContainer}>
-            <Image src="/p1.jpeg" alt="" fill className={styles.image} />
-          </div>
-        )}
-        <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.food}`}>Food</span>
-          <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h3>
-          <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
-          </div>
-        </div>
-      </Link>
-      <Link href="/" className={styles.item}>
-        {withImage && (
-          <div className={styles.imageContainer}>
-            <Image src="/p1.jpeg" alt="" fill className={styles.image} />
-          </div>
-        )}
-        <div className={styles.textContainer}>
-          <span className={`${styles.category} ${styles.fashion}`}>
-            Fashion
-          </span>
-          <h3 className={styles.postTitle}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          </h3>
-          <div className={styles.detail}>
-            <span className={styles.username}>John Doe</span>
-            <span className={styles.date}> - 10.03.2023</span>
-          </div>
-        </div>
-      </Link>
+
     </div>
   );
 };

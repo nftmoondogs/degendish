@@ -8,15 +8,11 @@ export const GET = async (req) => {
   const page = parseInt(searchParams.get("page"), 10) || 1; // Make sure there's a default page
   const cat = searchParams.get("cat");
 
-  const POST_PER_PAGE = 10; // Assuming you want to revert back to 10 posts per page or adjust as needed
-
-  // Adjusted skip calculation to skip an additional post on the first page
-  let skipCalculation = POST_PER_PAGE * (page - 1);
-  if (page === 1) skipCalculation += 1; // Skip the first post only on the first page
+  const POST_PER_PAGE = 1;
 
   let query = {
     take: POST_PER_PAGE,
-    skip: skipCalculation,
+    skip: POST_PER_PAGE * (page - 1),
     orderBy: {
       createdAt: 'desc', // Order posts from newest to oldest
     },

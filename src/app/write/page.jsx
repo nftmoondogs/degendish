@@ -45,9 +45,11 @@ const WritePage = () => {
       const data = await res.json();
       router.push(`/posts/${data.slug}`);
     }
+  };
 
-    // Firebase upload (only runs in the browser)
-    if (typeof window !== 'undefined') {
+  // Firebase Upload Logic (Client-side execution)
+  useEffect(() => {
+    if (file) { 
       const storage = getStorage(app);
       const upload = () => {
         const name = new Date().getTime() + file.name;
@@ -78,9 +80,9 @@ const WritePage = () => {
           }
         );
       };
-      file && upload();
+      upload(); 
     }
-  };
+  }, [file]);
 
   if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;

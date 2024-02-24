@@ -23,13 +23,13 @@ const SinglePage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-            <Head>
+      <Head>
         <title>{data.title}</title>
         <meta property="og:title" content={data.title} />
-        <meta property="og:image" content={data.img} /> 
+        {/* Construct absolute image URL if needed */}
+        <meta property="og:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} /> 
         <meta property="og:description" content={"a"} />
-        <meta property="og:url" content={`http://localhost:3000/posts/${slug}`} />
-        {/* Consider adding tags like twitter:card, twitter:image */}
+        <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
       </Head>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>

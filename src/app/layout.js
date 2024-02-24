@@ -9,7 +9,7 @@ import AuthProvider from "@/providers/AuthProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "DegenDish",
+  title: "SolanaScoop",
   description: "News Media Agency Reporting Everything Happening on Solana Ecosystem! Powered by WOOFLabs",
 };
 

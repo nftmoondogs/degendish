@@ -23,14 +23,19 @@ const SinglePage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>{data.title}</title>
-        <meta property="og:title" content={data.title} />
-        {/* Construct absolute image URL if needed */}
-        <meta property="og:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} /> 
-        <meta property="og:description" content={"a"} />
-        <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
-      </Head>
+<Head>
+  <title>{data.title}</title>
+  <meta property="og:title" content={data.title} />
+  <meta property="og:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} />
+  <meta property="og:description" content={data.desc} />
+  <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
+  {/* Twitter Card tags */}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:creator" content="@YourTwitterHandle" />
+  <meta name="twitter:title" content={data.title} />
+  <meta name="twitter:description" content={data.desc} />
+  <meta name="twitter:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} />
+</Head>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{data?.title}</h1>

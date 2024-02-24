@@ -35,10 +35,10 @@ const SinglePage = async ({ params }) => {
         {/* Open Graph data for Facebook and Telegram */}
         <meta property="og:title" content={data?.title} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content={`http://localhost:3000/posts/${slug}`} />
+        <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
         <meta property="og:image" content={data?.img} />
         <meta property="og:description" content={data?.desc.replace(/<[^>]+>/g, '').substring(0, 150)} />
-        <meta property="og:site_name" content="Your Site Name" />
+        <meta property="og:site_name" content="SolanaScoop" />
       </Head>
       <div className={styles.container}>
         <div className={styles.infoContainer}>

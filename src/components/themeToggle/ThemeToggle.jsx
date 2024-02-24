@@ -16,7 +16,7 @@ const ThemeToggle = () => {
         theme === "dark" ? { backgroundColor: "#8f4db4" } : { backgroundColor: "#0f172a" }
       }
     >
-      <Image src="" alt="" width={14} height={14} />
+      
       <div
         className={styles.ball}
         style={
@@ -25,7 +25,7 @@ const ThemeToggle = () => {
             : { right: 1, background: "white" }
         }
       ></div>
-      <Image src="" alt="" width={14} height={14} />
+      
     </div>
   );
 };

@@ -1,32 +1,16 @@
+// Import necessary modules
 import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import Head from 'next/head';
 
-const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed");
-  }
-
-  return res.json();
-};
-
-const SinglePage = async ({ params }) => {
-  const { slug } = params;
-
-  const data = await getData(slug);
-
+const SinglePage = ({ data, slug }) => {
   return (
     <div className={styles.container}>
       <Head>
         <title>{data?.title || 'Default Title'}</title>
         <meta property="og:title" content={data?.title || 'Default Title'} />
-        {/* Ensure the image URL is absolute and provide a default image URL if not present */}
         <meta property="og:image" content={data?.img?.startsWith('http') ? data.img : `http://solanascoop.com${data?.img}` || 'default-image-url'} />
         <meta property="og:description" content={data?.desc || 'Default description'} />
         <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
@@ -66,6 +50,31 @@ const SinglePage = async ({ params }) => {
       </div>
     </div>
   );
+};
+
+export async function getServerSideProps({ params }) {
+  const { slug } = params;
+  // Assuming getData is defined elsewhere and fetches data based on the slug
+  const data = await getData(slug);
+
+  return {
+    props: {
+      data,
+      slug,
+    },
+  };
+}
+
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed to fetch");
+  }
+
+  return res.json();
 };
 
 export default SinglePage;

@@ -12,17 +12,19 @@
 }
 
 /* ... other styles... */
-.logo {
-  max-height: 100%;   /* Make the logo fit the navbar's height */
-  object-fit: contain; 
-}
-
 
 .logoWrapper {
-  max-width: 60px; /* Adjust as needed */
-  max-height: 60px; /* Adjust as needed */
+  max-width: 170px;  
+  max-height: 170px;  
+  overflow: hidden;
+  margin-right: 100px; /* Adjust the spacing value as desired */
 }
 
+.logoWrapper img { 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain; 
+}
 
 .links {
   display: flex;
@@ -32,33 +34,27 @@
   font-size: 20px;
 }
 
-@media screen and (max-width: 1280px) {
-  .logo {
-    font-size: 32px;
+/* ... your media queries ... */
+
+@media screen and (max-width: 640px) { /* Adjust breakpoint as needed */
+  .logoWrapper {
+    max-width: 100px;  /* Larger size for mobile */
+    max-height: 100px; /* Larger size for mobile */
   }
-  .links {
-    font-size: 18px;
-    gap: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
+
   .social {
-    display: none;
+    display: none; 
   }
+
   .logo {
-    text-align: left;
+    text-align: left; 
   }
-}
-@media screen and (max-width: 768px) {
-  .logo {
-    font-size: 24px;
-  }
-}
-@media screen and (max-width: 640px) {
+
   .links{
-    justify-content: flex-end;
+    justify-content: flex-end; 
   }
+
   .link {
-    display: none;
+    display: none; 
   }
 }

@@ -7,12 +7,21 @@ const Footer = () => {
   return (
     <div className={styles.container}>
       <div className={styles.info}>
-        <div className={styles.logo}>
-          <Image src="/woof.png" alt="woof" width={50} height={50} />
-          <h1 className={styles.logoText}>SolanaScoop</h1>
-        </div>
+
+
+      <div className={styles.logoWrapper}> 
+        <Image
+          src="https://i.ibb.co/tXT076b/full-logo-transparent.png"
+          alt="SolanaScoop Logo"
+          width={200} // Original width
+          height={200} // Original height
+          layout="responsive" // Maintain aspect ratio 
+        />
+      </div>
+
+
         <p className={styles.desc}>
-        Your daily scoop of Solana news powered by WOOFLabs
+          Your daily scoop of Solana News powered by WOOFLabs
         </p>
         <div className={styles.icons}>
           <Image src="/twitter.svg" alt="" width={18} height={18} />
@@ -45,3 +54,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

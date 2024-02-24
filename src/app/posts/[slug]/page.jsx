@@ -26,15 +26,15 @@ const SinglePage = async ({ params }) => {
 <Head>
   <title>{data.title}</title>
   <meta property="og:title" content={data.title} />
-  <meta property="og:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} />
+  <meta property="og:image" content={data.img.startsWith('http') ? data.img : `http://localhost:3000${data.img}`} />
   <meta property="og:description" content={data.desc} />
-  <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
+  <meta property="og:url" content={`http://localhost:3000/posts/${slug}`} />
   {/* Twitter Card tags */}
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:creator" content="@YourTwitterHandle" />
   <meta name="twitter:title" content={data.title} />
   <meta name="twitter:description" content={data.desc} />
-  <meta name="twitter:image" content={data.img.startsWith('http') ? data.img : `http://solanascoop.com${data.img}`} />
+  <meta name="twitter:image" content={data.img.startsWith('http') ? data.img : `http://localhost:3000${data.img}`} />
 </Head>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>

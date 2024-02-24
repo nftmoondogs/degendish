@@ -8,7 +8,7 @@ import Comments from "@/components/comments/Comments";
 import Head from 'next/head';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://solanascoop.com/api/posts/${slug}`, {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
     cache: "no-store",
   });
 

@@ -8,7 +8,7 @@ import Comments from "@/components/comments/Comments";
 import Head from 'next/head';
 
 const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+  const res = await fetch(`http://solanascoop.com/api/posts/${slug}`, {
     cache: "no-store",
   });
 
@@ -49,7 +49,7 @@ const SinglePage = ({ params }) => {
         <meta property="og:title" content={data?.title} />
         <meta property="og:description" content={data?.desc.substring(0, 150)} /> 
         <meta property="og:image" content={data?.img} />
-        <meta property="og:url" content={`https://yourwebsite.com/post/${slug}`} /> 
+        <meta property="og:url" content={`https://solanascoop.com/post/${slug}`} /> 
         <meta property="og:type" content="article" /> 
 
         {/* Twitter Card  */}

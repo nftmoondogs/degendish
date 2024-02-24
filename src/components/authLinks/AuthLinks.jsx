@@ -33,6 +33,7 @@ const AuthLinks = () => {
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
           <Link href="/login">Login</Link>
+          
             
         </div>
       )}

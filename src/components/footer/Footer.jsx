@@ -31,8 +31,8 @@ const Footer = () => {
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Tags</span>
-          <Link href="/">DeFi</Link>
-          <Link href="/">NFTs</Link>
+          <Link href="/blog?cat=DeFi">DeFi</Link>
+          <Link href="/blog?cat=NFT">NFTs</Link>
         </div>
         <div className={styles.list}>
           <span className={styles.listTitle}>Social</span>

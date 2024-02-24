@@ -10,7 +10,7 @@ export default function Home({ searchParams }) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.featuredContainer} style={{ paddingTop: '70px', paddingBottom: '130px' }}>
+      <div className={styles.featuredContainer} style={{ paddingTop: '60px', paddingBottom: '70px' }}>
       <Featured page={page}/>
 </div>
       <div className={styles.content}>

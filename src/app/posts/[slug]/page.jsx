@@ -23,6 +23,14 @@ const SinglePage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
+            <Head>
+        <title>{data.title}</title>
+        <meta property="og:title" content={data.title} />
+        <meta property="og:image" content={data.img} /> 
+        <meta property="og:description" content={"a"} />
+        <meta property="og:url" content={`http://localhost:3000/posts/${slug}`} />
+        {/* Consider adding tags like twitter:card, twitter:image */}
+      </Head>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{data?.title}</h1>

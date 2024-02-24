@@ -3,7 +3,7 @@
 }
 
 .responsiveTitle { 
-  font-family: 'Roboto', sans-serif; 
+  font-family: 'Helvetica', sans-serif; /* Apply Helvetica font */
   font-weight: 500;
   text-align: left;
   margin-bottom: 20px;

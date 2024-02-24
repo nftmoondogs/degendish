@@ -84,3 +84,12 @@ a {
 .quill > .ql-container > .ql-editor.ql-blank::before{
   color: #b3b3b1;
 }
+
+@font-face {
+  font-family: 'Helvetica'; /* Name to reference the font */
+  src: url('/fonts/Helvetica.woff2') format('woff2'),
+       url('/fonts/Helvetica.woff') format('woff'),
+       url('/fonts/Helvetica.ttf') format('truetype'); /* Add other formats as needed */
+  font-weight: normal; 
+  font-style: normal; 
+}

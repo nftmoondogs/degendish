@@ -23,13 +23,6 @@ const SinglePage = async ({ params }) => {
 
   return (
     <div className={styles.container}>
-      <Head>
-        <title>{data?.title || 'Default Title'}</title>
-        <meta property="og:title" content={data?.title || 'Default Title'} />
-        <meta property="og:image" content={data?.img?.startsWith('http') ? data.img : `http://solanascoop.com${data?.img}` || 'default-image-url'} />
-        <meta property="og:description" content={data?.desc || 'Default description'} />
-        <meta property="og:url" content={`http://solanascoop.com/posts/${slug}`} />
-      </Head>
       <div className={styles.infoContainer}>
         <div className={styles.textContainer}>
           <h1 className={styles.title}>{data?.title}</h1>

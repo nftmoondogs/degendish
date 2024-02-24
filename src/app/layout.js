@@ -17,10 +17,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-      <meta name="twitter:card" content="summary" />
-<meta name="twitter:site" content="@nytimesbits" />
-<meta name="twitter:creator" content="@nickbilton" />
-<meta name="twitter:image" content="https://i.ibb.co/tXT076b/full-logo-transparent.png" />
         <AuthProvider>
           <ThemeContextProvider>
             <ThemeProvider>

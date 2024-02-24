@@ -11,9 +11,9 @@ const Card = ({ key, item }) => {
         </div>
       )}
       <div className={styles.textContainer}>
-
         <Link href={`/posts/${item.slug}`}>
-          <h1>{item.title}</h1>
+          {/* The h1 now has responsive font-size */}
+          <h1 className={styles.responsiveTitle}>{item.title}</h1>
         </Link>
         {/* <p className={styles.desc}>{item.desc.substring(0, 60)}</p> */}
         <div className={styles.detail}>

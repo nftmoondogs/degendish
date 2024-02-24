@@ -1,18 +1,34 @@
-.container{
-  flex:5
+.container {
+  flex: 5;
 }
 
-.title { 
+.responsiveTitle { 
   font-family: 'Roboto', sans-serif; 
-  font-size: 64px;                    
-  font-weight: 500;                   
-  text-align: left;                   /* Left alignment */
-  margin-bottom: 20px;   
+  font-weight: 500;
+  text-align: left;
+  margin-bottom: 20px;
+  color: #8f4db4; 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); 
 
-  /* Optional Refinements */
-                 /* Darker color for contrast */
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  /* Responsive Settings */ 
+  font-size: 3.5vw;         
+  max-font-size: 72px;      
+  min-font-size: 24px;      
 }
 
-/* Media Queries (no changes needed from previous example) */
-/* ... */
+/* Media Queries */
+@media screen and (max-width: 1280px) {
+  .responsiveTitle { 
+    font-size: 40px; 
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .responsiveTitle {
+    font-size: 40px; 
+  }
+
+  .imgContainer {
+    display: none;
+  }
+} 

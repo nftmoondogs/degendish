@@ -29,15 +29,15 @@ const CardList = async ({ page, cat }) => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Latest News</h1>
+      <h1 className={styles.responsiveTitle}>Latest News</h1> 
       <div className={styles.posts}>
         {posts?.map((item) => (
           <Card item={item} key={item._id} />
         ))}
       </div>
-
     </div>
   );
 };
 
 export default CardList;
+

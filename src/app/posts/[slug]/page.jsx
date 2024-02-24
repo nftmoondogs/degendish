@@ -1,11 +1,26 @@
-// Import necessary modules
 import Menu from "@/components/Menu/Menu";
 import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 import Head from 'next/head';
 
-const SinglePage = ({ data, slug }) => {
+const getData = async (slug) => {
+  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
+    cache: "no-store",
+  });
+
+  if (!res.ok) {
+    throw new Error("Failed");
+  }
+
+  return res.json();
+};
+
+const SinglePage = async ({ params }) => {
+  const { slug } = params;
+
+  const data = await getData(slug);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +36,7 @@ const SinglePage = ({ data, slug }) => {
           <div className={styles.user}>
             {data?.user?.image && (
               <div className={styles.userImageContainer}>
-                <Image src={data.user.image} alt="" fill className={styles.avatar} />
+                <Image src={data.user.image} alt="" layout="fill" objectFit="cover" />
               </div>
             )}
             <div className={styles.userTextContainer}>
@@ -32,16 +47,16 @@ const SinglePage = ({ data, slug }) => {
         </div>
         {data?.img && (
           <div className={styles.imageContainer}>
-            <Image src={data.img} alt="" fill className={styles.image} />
+            <Image src={data.img} alt="" layout="fill" objectFit="cover" />
           </div>
         )}
       </div>
       <div className={styles.content}>
         <div className={styles.post}>
-        <div
-  className={styles.description}
-  dangerouslySetInnerHTML={{ __html: data?.desc || '' }} // Correct usage
-/>
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: data?.desc || '' }}
+          />
           <div className={styles.comment}>
             <Comments postSlug={slug}/>
           </div>
@@ -50,31 +65,6 @@ const SinglePage = ({ data, slug }) => {
       </div>
     </div>
   );
-};
-
-export async function getServerSideProps({ params }) {
-  const { slug } = params;
-  // Assuming getData is defined elsewhere and fetches data based on the slug
-  const data = await getData(slug);
-
-  return {
-    props: {
-      data,
-      slug,
-    },
-  };
-}
-
-const getData = async (slug) => {
-  const res = await fetch(`http://localhost:3000/api/posts/${slug}`, {
-    cache: "no-store",
-  });
-
-  if (!res.ok) {
-    throw new Error("Failed to fetch");
-  }
-
-  return res.json();
 };
 
 export default SinglePage;

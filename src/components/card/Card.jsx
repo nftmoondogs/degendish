@@ -7,21 +7,18 @@ const Card = ({ key, item }) => {
     <div className={styles.container} key={key}>
       {item.img && (
         <div className={styles.imageContainer}>
-          <Image src={item.img} alt="" fill className={styles.image} />
+          <Image src={item.img} alt="" layout="fill" objectFit="cover" className={styles.image} />
         </div>
       )}
       <div className={styles.textContainer}>
-
-        <Link href={`/posts/${item.slug}`}>
-          <h1>{item.title}</h1>
+        <Link href={`/posts/${item.slug}`}> 
+          <h1 className={styles.title}>{item.title}</h1> 
         </Link>
         <div className={styles.detail}>
-          <span className={styles.date}>
-            {item.createdAt.substring(0, 10)} -{" "}
-          </span>
+          <span className={styles.date}>{item.createdAt.substring(0, 10)}</span>
           <span className={styles.category}>{item.catSlug}</span>
         </div>
-        {/* <p className={styles.desc}>{item.desc.substring(0, 60)}</p> */}
+       {/* <p className={styles.desc}>{item.desc.substring(0, 60)}</p> */}
       </div>
     </div>
   );

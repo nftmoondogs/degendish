@@ -12,19 +12,25 @@
 }
 
 .imageContainer {
-  position: relative;
-  width: 100%;
-  height: 450px; /* You can adjust this as needed */
+  position: relative; /* Crucial for aspect ratio technique */
+  width: 100%; 
+  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
   overflow: hidden;
-  border-radius: 8px 8px 0 0;
+  border-radius: 8px 8px 0 0; 
 }
+
 
 
 /* Ensure .image class does not have unnecessary properties that could hide the image */
 .image {
-  /* ... (other styles if you have any) ... */ 
-  object-fit: cover; /* Ensure the image covers the area while maintaining aspect ratio*/
+  object-fit: cover; 
+  width: 100%; 
+  height: 100%;
+  position: absolute; /* Allow it to fill the container */
+  top: 0;
+  left: 0;
 }
+
 
 
 /* ... other styles ... */
@@ -48,8 +54,9 @@
 
 .detail {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  align-items: flex-start; /* Modified for left alignment on mobile */
+  gap: 10px;  
+  flex-wrap: wrap; /* Allows the elements to wrap on narrow screens */
 }
 
 .date {

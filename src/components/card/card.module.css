@@ -7,13 +7,13 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
-  width: 100%; /* Set container width to full viewport width */
-  margin: 0; /* Remove auto margins */
+  width: 100%; 
+  margin: 0; 
 }
 
 .imageContainer {
-  flex: 0 0 auto; 
-  height: 300px; /* Adjust default image height */
+  flex: 0 0 auto;
+  height: 350px; /* Increased default height on desktop */
   position: relative;
   width: 100%; 
   overflow: hidden; 
@@ -33,10 +33,15 @@
   gap: 15px; 
 }
 
+.title {
+  font-size: 1.2rem; 
+}
+
 .detail {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Modified for left alignment on mobile */
   gap: 10px; 
+  flex-wrap: wrap; 
 }
 
 .date {
@@ -67,21 +72,42 @@
   color: var(--softTextColor); 
 }
 
-/* Responsive design adjustments */
+@media screen and (max-width: 1024px) { /* Adjust breakpoint as needed */
+  .imageContainer {
+    height: 300px; 
+  }
+}
+
 @media screen and (max-width: 768px) { 
   .container {
-    width: 100%; /* Ensure container is full width on smaller screens */
-    padding: 20px 10px; /* Adjust padding for smaller screens */
+    width: 100%; 
+    padding: 20px 10px; 
+  }
+
+  .imageContainer {
+    height: 250px; 
   }
 }
 
 @media screen and (max-width: 500px) {
+  .title {
+    font-size: 1rem; 
+  }
+
   .detail { 
-    flex-direction: column; 
+    flex-direction: column;
     gap: 5px;
   }
 
   .desc {
-    font-size: 15px; /* Slightly reduce text size for smaller screens */
+    font-size: 15px; 
   }
-}
+
+  .container {
+    flex-direction: column;
+  }
+
+  .imageContainer { /* Height on small screens */
+    height: 200px; 
+  } 
+} 

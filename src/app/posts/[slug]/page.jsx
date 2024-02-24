@@ -38,10 +38,10 @@ const SinglePage = ({ data, slug }) => {
       </div>
       <div className={styles.content}>
         <div className={styles.post}>
-          <div
-            className={styles.description}
-            dangerouslySetInnerHTML={{ __html: data?.desc }}
-          />
+        <div
+  className={styles.description}
+  dangerouslySetInnerHTML={{ __html: data?.desc || '' }} // Correct usage
+/>
           <div className={styles.comment}>
             <Comments postSlug={slug}/>
           </div>

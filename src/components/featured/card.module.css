@@ -235,16 +235,19 @@
 .responsiveTitle {
   font-size: 1.5vw; 
   max-font-size: 4vw; 
+  font-family: 'Helvetica', sans-serif; 
 }
 
 @media screen and (max-width: 768px) {
   .responsiveTitle {
     font-size: 4vw;
+    font-family: 'Helvetica', sans-serif; 
   }
 }
 
 @media screen and (max-width: 500px) {
   .responsiveTitle {
     font-size: 4vw;
+    font-family: 'Helvetica', sans-serif; 
   }
 }

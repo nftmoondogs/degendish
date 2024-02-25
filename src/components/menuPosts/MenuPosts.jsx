@@ -6,7 +6,7 @@ import styles from "./menuPosts.module.css"
 const MenuPosts = ({ withImage }) => {
   return (
     <div className={styles.items}>
-      <Link href="/posts/youtuber-ksi-accused-of-pump-and-dump-schemes-the-full-story" className={styles.item}>
+      <Link href="/posts/solfare-wallet-revolutionizes-solana-trading-experience-with-tradingview-chart-integration" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
             <Image src="/k1.png" alt="" fill className={styles.image} />
@@ -15,7 +15,7 @@ const MenuPosts = ({ withImage }) => {
         <div className={styles.textContainer}>
           <span className={`${styles.category} ${styles.DeFi}`}>DeFi</span>
           <h3 className={styles.postTitle}>
-          Youtuber KSI Accused of Pump and Dump Schemes: The Full Story
+          Solfare introduced a groundbreaking feature
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>Yuccie Hope</span>
@@ -23,7 +23,7 @@ const MenuPosts = ({ withImage }) => {
           </div>
         </div>
       </Link>
-      <Link href="/posts/what-is-portal-coin-the-47th-binance-launchpool-project" className={styles.item}>
+      <Link href="/posts/solana-nfts-reach-unprecedented-milestone-in-all-time-sales-volume" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
             <Image src="/b2.png" alt="" fill className={styles.image} />
@@ -34,7 +34,7 @@ const MenuPosts = ({ withImage }) => {
             NFT
           </span>
           <h3 className={styles.postTitle}>
-          What is Portal Coin: The 47th Binance Launchpool Project?
+          Solana NFT Market Hits Record High, Showcasing Remarkable Growth
           </h3>
           <div className={styles.detail}>
             <span className={styles.username}>WOOF MOD</span>

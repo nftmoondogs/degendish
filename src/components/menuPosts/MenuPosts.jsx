@@ -9,7 +9,7 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/posts/solfare-wallet-revolutionizes-solana-trading-experience-with-tradingview-chart-integration" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/k1.png" alt="" fill className={styles.image} />
+            <Image src="/k2.png" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>
@@ -26,7 +26,7 @@ const MenuPosts = ({ withImage }) => {
       <Link href="/posts/solana-nfts-reach-unprecedented-milestone-in-all-time-sales-volume" className={styles.item}>
         {withImage && (
           <div className={styles.imageContainer}>
-            <Image src="/b2.png" alt="" fill className={styles.image} />
+            <Image src="/b3.png" alt="" fill className={styles.image} />
           </div>
         )}
         <div className={styles.textContainer}>

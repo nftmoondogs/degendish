@@ -19,14 +19,17 @@ const Navbar = () => {
 
       {/* Logo Wrapper for controlled sizing */}
       <div className={styles.logoWrapper}> 
-        <Image
-          src="https://i.ibb.co/tXT076b/full-logo-transparent.png"
-          alt="SolanaScoop Logo"
-          width={200} // Original width
-          height={200} // Original height
-          layout="responsive" // Maintain aspect ratio 
-        />
-      </div>
+  <a href="/"> 
+    <Image
+      src="https://i.ibb.co/tXT076b/full-logo-transparent.png"
+      alt="SolanaScoop Logo"
+      width={200} 
+      height={200}  
+      layout="responsive" 
+    />
+  </a>
+</div>
+
 
       <div className={styles.links}>
         <Link href="/" className={styles.link}>Homepage</Link>

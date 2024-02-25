@@ -7,247 +7,109 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 20px;
-  width: 100%;
-  margin: 0;
+  width: 100%; 
+  margin: 0; 
 }
 
 .imageContainer {
-  position: relative; /* Crucial for aspect ratio technique */
+  flex: 0 0 auto;
+  height: 450px; /* Increased default height on desktop */
+  position: relative;
   width: 100%; 
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-  overflow: hidden;
+  overflow: hidden; 
   border-radius: 8px 8px 0 0; 
 }
 
-
-
-/* Ensure .image class does not have unnecessary properties that could hide the image */
 .image {
-  object-fit: cover; 
+  object-fit: cover;
   width: 100%; 
   height: 100%;
-  position: absolute; /* Allow it to fill the container */
-  top: 0;
-  left: 0;
 }
-
-
-
-/* ... other styles ... */
-
-.imageLink {
-  display: block; /* Ensure the link takes up available space */
-  width: 100%;    /* Link occupies full container width */
-  height: 250px;  /* Set a height for the link area */
-  position: relative; /* Required for Image with layout='fill' */
-  border-radius: 8px 8px 0 0;  /* Apply rounded corners */
-  overflow: hidden;            /* Ensures image stays within container */
-}
-
 
 .textContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.detail {
-  display: flex;
-  align-items: flex-start; /* Modified for left alignment on mobile */
-  gap: 10px;  
-  flex-wrap: wrap; /* Allows the elements to wrap on narrow screens */
-}
-
-.date {
-  color: gray;
-  font-size: 14px;
-}
-
-.category {
-  color: crimson;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.desc {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--softTextColor);
-  line-height: 1.5;
-}
-
-.link {
-  border-bottom: 1px solid crimson;
-  padding: 5px 0px;
-  transition: color 0.2s ease;
-}
-
-.link:hover {
-  color: var(--softTextColor);
-}
-
-/* Responsive design adjustments */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 20px 10px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .detail {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .desc {
-    font-size: 15px;
-  }
-}
-
-.container {
-  margin-bottom: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  padding: 20px;
-  width: 100%;
-  margin: 0;
-}
-
-.imageContainer {
-  position: relative; /* Crucial for aspect ratio technique */
   width: 100%; 
-  padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
-  overflow: hidden;
-  border-radius: 8px 8px 0 0; 
-}
-
-
-
-/* Ensure .image class does not have unnecessary properties that could hide the image */
-.image {
-  object-fit: cover; 
-  width: 100%; 
-  height: 100%;
-  position: absolute; /* Allow it to fill the container */
-  top: 0;
-  left: 0;
-}
-
-
-
-/* ... other styles ... */
-
-.imageLink {
-  display: block; /* Ensure the link takes up available space */
-  width: 100%;    /* Link occupies full container width */
-  height: 250px;  /* Set a height for the link area */
-  position: relative; /* Required for Image with layout='fill' */
-  border-radius: 8px 8px 0 0;  /* Apply rounded corners */
-  overflow: hidden;            /* Ensures image stays within container */
-}
-
-
-.textContainer {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px; 
 }
 
-.detail {
-  display: flex;
-  align-items: flex-start; /* Modified for left alignment on mobile */
-  gap: 10px;  
-  flex-wrap: wrap; /* Allows the elements to wrap on narrow screens */
-}
-
-.date {
-  color: gray;
-  font-size: 14px;
-}
-
-.category {
-  color: crimson;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.desc {
-  font-size: 16px;
-  font-weight: 300;
-  color: var(--softTextColor);
-  line-height: 1.5;
-}
-
-.link {
-  border-bottom: 1px solid crimson;
-  padding: 5px 0px;
-  transition: color 0.2s ease;
-}
-
-.link:hover {
-  color: var(--softTextColor);
-}
-
-/* Responsive design adjustments */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 20px 10px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .detail {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .desc {
-    font-size: 15px;
-  }
-}
-
-/* ... your other styles ... */
-/* Responsive design adjustments */
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 20px 10px;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .detail {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-  .desc {
-    font-size: 15px;
-  }
-}
-
-/* Responsive title styles */
-.responsiveTitle {
-  font-size: 1.5vw; 
-  max-font-size: 4vw; 
+.title {
+  font-size: 1.2rem; 
   font-family: 'Helvetica', sans-serif; 
 }
 
-@media screen and (max-width: 768px) {
-  .responsiveTitle {
-    font-size: 4vw;
-    font-family: 'Helvetica', sans-serif; 
+.detail {
+  display: flex;
+  align-items: flex-start; /* Modified for left alignment on mobile */
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+.date {
+  color: gray;
+  font-size: 14px;
+}
+
+.category {
+  color: rgb(191, 0, 255);
+  font-weight: 500;
+  text-transform: uppercase; 
+}
+
+.desc {
+  font-size: 16px;
+  font-weight: 300;
+  color: var(--softTextColor);
+  line-height: 1.5; 
+}
+
+.link {
+  border-bottom: 1px solid rgb(187, 0, 255);
+  padding: 5px 0px; 
+  transition: color 0.2s ease; 
+}
+
+.link:hover {
+  color: var(--softTextColor); 
+}
+
+@media screen and (max-width: 1024px) { /* Adjust breakpoint as needed */
+  .imageContainer {
+    height: 300px; 
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .container {
+    width: 100%; 
+    padding: 20px 10px; 
+  }
+
+  .imageContainer {
+    height: 250px; 
   }
 }
 
 @media screen and (max-width: 500px) {
-  .responsiveTitle {
-    font-size: 4vw;
+  .title {
+    font-size: 1rem; 
     font-family: 'Helvetica', sans-serif; 
   }
-}
+
+  .detail { 
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .desc {
+    font-size: 15px; 
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .imageContainer { /* Height on small screens */
+    height: 200px; 
+  } 
+} 

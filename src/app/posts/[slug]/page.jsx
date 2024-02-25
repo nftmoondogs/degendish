@@ -28,25 +28,23 @@ const SinglePage = async ({ params }) => {
       </Head>
 
       <main className={styles.mainContent}>
-        <article className={styles.post}>
-          <header className={styles.postHeader}> 
-            <h1>{data?.title}</h1> 
-          </header>
+       <article className={styles.post}>
+           {/* ... other elements ... */}
 
-          <div className={styles.postContent}> 
-            {data?.img && (
-              <figure className={styles.imageContainer}>
-                <Image
-                  src={data.img}
-                  alt={data?.title}
-                  layout="responsive"
-                  width={700}
-                  height={450}
-                  sizes="(max-width: 768px) 100vw, 700px"
-                  loading="eager"
-                />
-              </figure>
-            )}
+           <div className={styles.postContent}> 
+               {data?.img && (
+                   <figure className={styles.imageContainer}>
+                       <Image
+                           src={data.img}
+                           alt={data?.title}
+                           layout="responsive"
+                           width={700}
+                           height={450}
+                           sizes="(max-width: 768px) 100vw, 700px"
+                           loading="eager"
+                       />
+                   </figure>
+               )}
 
             <div className={styles.user} style={{ marginTop: '15px' }}> 
               {data?.user?.image && (
